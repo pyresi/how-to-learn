@@ -6,14 +6,19 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
+/* ------------------------------------------- */
+/* ----------------- HEADER ------------------ */
+/* ------------------------------------------- */
 
 .header {
   display: flex;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  position: relative;
   /* выше установили ограничения для секции */
   background-color: #f2f2f2;
   /* font-family: 'Helvetica Neue', Arial, sans-serif */
@@ -21,7 +26,6 @@
 
 .logo {
   position: absolute;
-
 }
 
 .logo_place_header {
@@ -31,11 +35,14 @@
 
 .header__title {
   margin-left: 64px;
+  margin-top: 0;
+  margin-bottom: 0;
   width: 730px;
   align-self: center;
   min-height: 96px;
   font-size: 102px;
   font-style: normal;
+  z-index: 3;
 }
 
 .header__subtitle {
@@ -47,6 +54,10 @@
   min-height: 25px;
   font-size: 18px;
   font-style: normal;
+}
+
+.header__link {
+  color: #2f80ed;
 }
 
 .header__main-illustration {
@@ -67,14 +78,17 @@
   width: 568px;
   background-color: #2f80ed;
   z-index: 0;
-
 }
+
+/* ------------------------------------------- */
+/* --------------- DESCRIPTION --------------- */
+/* ------------------------------------------- */
 
 .description {
   display: flex;
   justify-content: center;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 0;
 }
 
 .two-columns {
@@ -90,7 +104,6 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-
 }
 
 .two-columns__main-text {
@@ -102,7 +115,6 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 34px;
-
 }
 
 .two-columns__paragraph {
@@ -113,7 +125,79 @@
   margin-top: 0;
 }
 
+/* ------------------------------------------- */
+/* ----------------- DIGITS ------------------ */
+/* ------------------------------------------- */
 
+.digits {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-title_position {
+  width: 60%;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.section-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.section-subtitle_position {
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.table_position {
+  width: 1100px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.table__cell_position {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.table__text_position {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
@@ -121,4 +205,70 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+/* ------------------------------------------- */
+/* ----------------- FEYNMAN ----------------- */
+/* ------------------------------------------- */
+
+.feynman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 890px;
+  background-color: #f2f2f2;
+  background-size: cover;
+  z-index: -1;
+}
+
+.feynman__title {
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.feynman__title_position {
+  margin-top: 100px;
+  margin-bottom: 70px;
+  z-index: 1;
+  width: 648px;
+}
+
+.feynman__subtitle {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.feynman__subtitle_position {
+  z-index: 1;
+  margin: 0;
+}
+
+.feynman__link {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.feynman__link_position {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  z-index: 1;
+}
+
+.feynman__image {
+  width: 867px;
+}
+
+.feynman__image_position {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
 }
